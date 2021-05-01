@@ -1,6 +1,5 @@
 <?xml version="1.0" encoding="utf-8"?>
-<androidx.constraintlayout.widget.ConstraintLayout
-    xmlns:android="http://schemas.android.com/apk/res/android"
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
@@ -22,8 +21,8 @@
         android:layout_height="70dp"
         android:layout_marginStart="20dp"
         android:orientation="vertical"
-        app:layout_constraintTop_toTopOf="@id/home_ic_profile"
-        app:layout_constraintStart_toEndOf="@id/home_ic_profile">
+        app:layout_constraintStart_toEndOf="@id/home_ic_profile"
+        app:layout_constraintTop_toTopOf="@id/home_ic_profile">
 
         <TextView
             android:id="@+id/home_tv_name"
@@ -65,138 +64,92 @@
 
     </LinearLayout>
 
-    <LinearLayout
-        android:id="@+id/home_btn_changeCardDesign"
-        android:layout_width="0dp"
-        android:layout_height="wrap_content"
-        android:background="@drawable/bg_btn_change_setting"
-        app:layout_constraintTop_toBottomOf="@id/home_ll_userInfo"
-        app:layout_constraintStart_toStartOf="@id/home_ll_userInfo"
-        app:layout_constraintEnd_toEndOf="parent"
-        android:layout_marginTop="10dp"
-        android:layout_marginEnd="20dp"
-        android:paddingVertical="3dp"
-        android:gravity="center">
-
-
-        <TextView
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:text="우리 안심 페이 설정 변경"
-            android:textColor="@color/white"
-            android:fontFamily="@font/nanum_bold"
-            android:textSize="20sp"/>
-    </LinearLayout>
 
     <View
         android:id="@+id/home_baseline"
         android:layout_width="0dp"
         android:layout_height="0.5dp"
+        android:layout_marginTop="30dp"
         android:background="#888888"
-        app:layout_constraintTop_toBottomOf="@id/home_btn_changeCardDesign"
-        app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
-        android:layout_marginTop="20dp"/>
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/home_ll_userInfo" />
 
     <LinearLayout
-        android:id="@+id/home_tv_missionTitle"
-        android:layout_width="match_parent"
+        android:id="@+id/home_tv_buy"
+        android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:orientation="horizontal"
         app:layout_constraintTop_toBottomOf="@id/home_baseline"
         app:layout_constraintStart_toStartOf="parent"
         android:layout_marginTop="20dp"
-        android:layout_marginStart="25dp"
-        android:layout_marginBottom="20dp">
+        android:layout_marginStart="10dp">
 
         <TextView
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:text="&#34;"
             android:fontFamily="@font/nanum"
-            android:textSize="24sp"
-            android:textColor="@color/black"/>
-
-        <TextView
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
             android:text="이름"
-            android:fontFamily="@font/nanum"
-            android:textSize="24sp"
-            android:textColor="@color/black" />
+            android:textSize="18sp" />
 
         <TextView
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:text="&#34;의 미션 설정"
-            android:fontFamily="@font/nanum"
-            android:textSize="24sp"
-            android:textColor="@color/black"/>
+            android:text="어린이가 자주 구매한 것들이에요"
+            android:textSize="18sp"/>
     </LinearLayout>
-
 
     <androidx.recyclerview.widget.RecyclerView
         android:id="@+id/home_rv_mission"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        app:layout_constraintTop_toBottomOf="@id/home_tv_missionTitle"
-        app:layout_constraintStart_toStartOf="parent"
+        android:overScrollMode="never"
         app:layout_constraintEnd_toEndOf="parent"
-        android:overScrollMode="never"/>
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/home_tv_buy" />
 
     <View
-        android:id="@+id/home_mission_line"
+        android:id="@+id/home_buy_line"
         android:layout_width="0dp"
         android:layout_height="0.5dp"
+        android:layout_marginTop="20dp"
         android:background="#888888"
-        app:layout_constraintTop_toBottomOf="@id/home_rv_mission"
-        app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
-        android:layout_marginTop="20dp"/>
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/home_rv_mission" />
 
     <LinearLayout
         android:id="@+id/home_tv_credit"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:orientation="horizontal"
-        app:layout_constraintTop_toBottomOf="@id/home_mission_line"
-        app:layout_constraintStart_toStartOf="parent"
+        android:layout_marginStart="10dp"
         android:layout_marginTop="20dp"
-        android:layout_marginStart="25dp"
-        android:layout_marginBottom="20dp">
+        android:layout_marginBottom="20dp"
+        android:orientation="horizontal"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/home_buy_line">
 
         <TextView
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:text="&#34;"
             android:fontFamily="@font/nanum"
-            android:textSize="24sp"
-            android:textColor="@color/black"/>
-
-        <TextView
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
             android:text="이름"
-            android:fontFamily="@font/nanum"
-            android:textSize="24sp"
-            android:textColor="@color/black" />
+            android:textSize="18sp" />
 
         <TextView
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:text="&#34;의 결제 기록"
-            android:fontFamily="@font/nanum"
-            android:textSize="24sp"
-            android:textColor="@color/black"/>
+            android:text="어린이가 자주 구매한 것들이에요"
+            android:textSize="18sp"/>
     </LinearLayout>
 
     <androidx.recyclerview.widget.RecyclerView
         android:id="@+id/home_rv_credit"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        app:layout_constraintTop_toBottomOf="@id/home_tv_credit"
-        app:layout_constraintStart_toStartOf="parent"
+        android:overScrollMode="never"
         app:layout_constraintEnd_toEndOf="parent"
-        android:overScrollMode="never"/>
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/home_tv_credit" />
 
 </androidx.constraintlayout.widget.ConstraintLayout>

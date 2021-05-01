@@ -8,8 +8,7 @@ import android.view.View;
 import android.widget.LinearLayout;
 
 import jgeun.hackathon.wooriontact_parent.R;
-import jgeun.hackathon.wooriontact_parent.src.child.ChildInfoActivity;
-import jgeun.hackathon.wooriontact_parent.src.child.SelectChildActivity;
+import jgeun.hackathon.wooriontact_parent.src.child.RegisterChildActivity;
 
 public class SelectMyCardActivity extends AppCompatActivity implements View.OnClickListener{
 
@@ -27,7 +26,7 @@ public class SelectMyCardActivity extends AppCompatActivity implements View.OnCl
     public void onClick(View v) {
         switch (v.getId()){
             case R.id.select_btn_register:
-                startActivity(new Intent(this, SelectChildActivity.class));
+                startActivity(new Intent(this, RegisterChildActivity.class));
                 break;
         }
     }

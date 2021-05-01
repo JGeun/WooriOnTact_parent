@@ -5,7 +5,7 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    tools:context=".src.child.SelectChildActivity"
+    tools:context=".src.child.RegisterChildActivity"
     android:paddingVertical="30dp"
     android:paddingHorizontal="35dp">
 
@@ -37,12 +37,22 @@
             android:layout_height="wrap_content"
             android:text="등록해주세요."
             android:textColor="@color/black"
-            android:textSize="20sp"
-            android:fontFamily="@font/nanum"
+            android:textSize="28sp"
+            android:fontFamily="@font/nanum_bold"
             android:layout_marginTop="10dp"
             android:layout_marginBottom="40dp" />
 
     </LinearLayout>
+
+    <ImageView
+        android:id="@+id/register_btn_add"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:src="@drawable/add_child"
+        app:layout_constraintTop_toBottomOf="@id/signup_ll_mainPanel"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        android:layout_marginTop="80dp"/>
 
     <LinearLayout
         android:layout_width="match_parent"
@@ -74,7 +84,8 @@
             android:paddingVertical="8dp"
             android:gravity="center"
             android:background="@drawable/bg_btn"
-            android:layout_marginTop="20dp">
+            android:layout_marginTop="20dp"
+            android:visibility="invisible">
 
             <TextView
                 android:layout_width="wrap_content"

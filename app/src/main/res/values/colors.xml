@@ -10,4 +10,5 @@
 
     <color name="mainColor">#3294F7</color>
     <color name="btnColor">#3294F7</color>
+    <color name="border">#A2A2A2</color>
 </resources>

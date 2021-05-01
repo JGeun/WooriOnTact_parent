@@ -12,10 +12,10 @@ import jgeun.hackathon.wooriontact_parent.src.child.InfoFragment2;
 import jgeun.hackathon.wooriontact_parent.src.child.InfoFragment3;
 import jgeun.hackathon.wooriontact_parent.src.mypage.AdFragment;
 
-public class HomeAdapter extends FragmentStateAdapter {
+public class ADAdapter extends FragmentStateAdapter {
     private Context context;
     private int mCount;
-    public HomeAdapter(FragmentActivity fa, int count) {
+    public ADAdapter(FragmentActivity fa, int count) {
         super(fa);
         context = fa;
         mCount = count;
@@ -26,17 +26,19 @@ public class HomeAdapter extends FragmentStateAdapter {
     public Fragment createFragment(int position) {
         int index = getRealPosition(position);
         if(index==0) {
-            return new AdFragment(1);
+            return new AdFragment(3);
         }
         else if(index==1){
-            return new AdFragment(2);
+            return new AdFragment(4);
         }
         else if(index==2){
             return new AdFragment(0);
         }else if(index==3) {
             return new AdFragment(0);
-        } else{
+        }else if(index==4) {
             return new AdFragment(0);
+        } else{
+            return new AdFragment(3);
         }
     }
 

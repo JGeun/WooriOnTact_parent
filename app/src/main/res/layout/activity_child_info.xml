@@ -34,56 +34,32 @@
 
     </LinearLayout>
 
-    <LinearLayout
+    <FrameLayout
+        android:id="@+id/info_framelayout"
         android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:orientation="vertical"
+        android:layout_height="@dimen/frameSize"
         app:layout_constraintTop_toBottomOf="@id/signup_ll_mainPanel"
+        app:layout_constraintBottom_toTopOf="@id/info_ll_btmPanel"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintEnd_toEndOf="parent">
 
-        <TextView
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:text="아이 이름"
-            android:fontFamily="@font/nanum"
-            android:textSize="18sp"
-            android:layout_marginTop="30dp"/>
-
-        <EditText
+        <androidx.viewpager2.widget.ViewPager2
+            android:id="@+id/viewpager"
             android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:layout_marginTop="10dp"/>
+            android:layout_height="match_parent"
+            android:clipToPadding="false"
+            android:clipChildren="false" />
 
-        <TextView
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:text="아이 나이"
-            android:fontFamily="@font/nanum"
-            android:textSize="18sp"
-            android:layout_marginTop="20dp"/>
-
-        <EditText
+        <me.relex.circleindicator.CircleIndicator3
+            android:id="@+id/indicator"
             android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:layout_marginTop="10dp"/>
-
-        <TextView
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:text="아이 가입 코드"
-            android:fontFamily="@font/nanum"
-            android:textSize="18sp"
-            android:layout_marginTop="20dp"/>
-
-        <EditText
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:layout_marginTop="10dp"/>
-    </LinearLayout>
+            android:layout_height="48dp"
+            android:layout_gravity="bottom"/>
+    </FrameLayout>
 
 
     <LinearLayout
+        android:id="@+id/info_ll_btmPanel"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:orientation="vertical"
@@ -96,8 +72,7 @@
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:src="@drawable/woori_logo"
-            android:layout_gravity="center"
-            android:layout_marginTop="100dp"/>
+            android:layout_gravity="center"/>
 
         <View
             android:layout_width="match_parent"

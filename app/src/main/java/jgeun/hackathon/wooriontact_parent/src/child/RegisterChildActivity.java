@@ -5,26 +5,28 @@ import androidx.appcompat.app.AppCompatActivity;
 import android.content.Intent;
 import android.os.Bundle;
 import android.view.View;
+import android.widget.ImageView;
 import android.widget.LinearLayout;
 
 import jgeun.hackathon.wooriontact_parent.R;
 
-public class SelectChildActivity extends AppCompatActivity implements View.OnClickListener{
+public class RegisterChildActivity extends AppCompatActivity implements View.OnClickListener{
 
-    private LinearLayout registerButton;
+    private ImageView addButton;
+
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        setContentView(R.layout.activity_select_child);
+        setContentView(R.layout.activity_register_child);
 
-        registerButton = findViewById(R.id.select_btn_register);
-        registerButton.setOnClickListener(this);
+        addButton = findViewById(R.id.register_btn_add);
+        addButton.setOnClickListener(this);
     }
 
     @Override
     public void onClick(View v) {
         switch (v.getId()){
-            case R.id.select_btn_register:
+            case R.id.register_btn_add:
                 startActivity(new Intent(this, ChildInfoActivity.class));
                 break;
         }

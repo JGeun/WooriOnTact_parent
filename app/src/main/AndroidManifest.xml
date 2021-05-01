@@ -9,10 +9,13 @@
         android:roundIcon="@mipmap/ic_launcher_round"
         android:supportsRtl="true"
         android:theme="@style/Theme.WooriOnTact_Parent">
-        <activity android:name=".src.mypage.MyPageActivity"></activity>
+        <activity android:name=".src.mypage.MyPageActivity">
+
+        </activity>
         <activity android:name=".src.child.CardSettingActivity" />
-        <activity android:name=".src.child.ChildInfoActivity" />
-        <activity android:name=".src.child.SelectChildActivity" />
+        <activity android:name=".src.child.ChildInfoActivity"
+            android:windowSoftInputMode="adjustPan"/>
+        <activity android:name=".src.child.RegisterChildActivity" />
         <activity android:name=".src.card.SelectMyCardActivity" />
         <activity android:name=".src.signup.SignUpActivity" />
         <activity android:name=".src.splash.SplashActivity">

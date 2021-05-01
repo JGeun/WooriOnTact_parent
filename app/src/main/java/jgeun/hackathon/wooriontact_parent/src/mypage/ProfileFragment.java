@@ -13,7 +13,7 @@ import androidx.recyclerview.widget.RecyclerView;
 import java.util.ArrayList;
 
 import jgeun.hackathon.wooriontact_parent.R;
-import jgeun.hackathon.wooriontact_parent.src.mypage.adapter.HomeAdapter;
+import jgeun.hackathon.wooriontact_parent.src.mypage.adapter.ProfileAdapter;
 import jgeun.hackathon.wooriontact_parent.src.mypage.data.InfoData;
 
 public class ProfileFragment extends Fragment {
@@ -28,8 +28,6 @@ public class ProfileFragment extends Fragment {
         // Inflate the layout for this fragment
         View view = inflater.inflate(R.layout.fragment_profile, container, false);
 
-
-
         TextView nameText =  view.findViewById(R.id.home_tv_name);
         nameText.setText(name);
         ArrayList<InfoData> missonList = new ArrayList<>();
@@ -40,7 +38,7 @@ public class ProfileFragment extends Fragment {
 
         RecyclerView missionView=view.findViewById(R.id.home_rv_mission);
         missionView.setLayoutManager(new LinearLayoutManager(view.getContext()));
-        missionView.setAdapter(new HomeAdapter(missonList));
+        missionView.setAdapter(new ProfileAdapter(missonList));
 
         ArrayList<InfoData> creditList = new ArrayList<>();
         creditList.add(new InfoData("일주일 동안 100,000원 이하 사용하기", true));
@@ -50,7 +48,7 @@ public class ProfileFragment extends Fragment {
         creditList.add(new InfoData("일주일 동안 100,000원 이하 사용하기", false));
         RecyclerView creditView=view.findViewById(R.id.home_rv_credit);
         creditView.setLayoutManager(new LinearLayoutManager(view.getContext()));
-        creditView.setAdapter(new HomeAdapter(creditList));
+        creditView.setAdapter(new ProfileAdapter(creditList));
         return view;
     }
 }

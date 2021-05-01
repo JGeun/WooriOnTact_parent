@@ -1,4 +1,4 @@
-package jgeun.hackathon.wooriontact_parent.src.mypage.adapter;
+package jgeun.hackathon.wooriontact_parent.src.child.adapter;
 
 import android.content.Context;
 
@@ -10,12 +10,11 @@ import androidx.viewpager2.adapter.FragmentStateAdapter;
 import jgeun.hackathon.wooriontact_parent.src.child.InfoFragment1;
 import jgeun.hackathon.wooriontact_parent.src.child.InfoFragment2;
 import jgeun.hackathon.wooriontact_parent.src.child.InfoFragment3;
-import jgeun.hackathon.wooriontact_parent.src.mypage.AdFragment;
 
-public class HomeAdapter extends FragmentStateAdapter {
+public class InfoAdapter extends FragmentStateAdapter {
     private Context context;
     private int mCount;
-    public HomeAdapter(FragmentActivity fa, int count) {
+    public InfoAdapter(FragmentActivity fa, int count) {
         super(fa);
         context = fa;
         mCount = count;
@@ -26,17 +25,15 @@ public class HomeAdapter extends FragmentStateAdapter {
     public Fragment createFragment(int position) {
         int index = getRealPosition(position);
         if(index==0) {
-            return new AdFragment(1);
+            return new InfoFragment1();
         }
         else if(index==1){
-            return new AdFragment(2);
+            return new InfoFragment2();
         }
         else if(index==2){
-            return new AdFragment(0);
-        }else if(index==3) {
-            return new AdFragment(0);
-        } else{
-            return new AdFragment(0);
+            return new InfoFragment3();
+        }else{
+            return new InfoFragment1();
         }
     }
 

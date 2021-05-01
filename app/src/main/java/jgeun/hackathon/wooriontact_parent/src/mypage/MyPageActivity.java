@@ -24,7 +24,7 @@ public class MyPageActivity extends AppCompatActivity {
     private FragmentTransaction ft;
 
     private ProfileFragment profileFragment;
-    private CardFragment cardFragment = new CardFragment();
+    private HomeFragment cardFragment = new HomeFragment(this);
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -57,22 +57,12 @@ public class MyPageActivity extends AppCompatActivity {
         });
     }
 
-    public void changeStatusColor(int n){
-        if(n == 0){
-            StatusBarUtil.setStatusBarColor(this, StatusBarUtil.StatusBarColorType.MAIN_COLOR_STATUS_BAR);
-        }else{
-            StatusBarUtil.setStatusBarColor(this, StatusBarUtil.StatusBarColorType.WHITE_STATUS_BAR);
-        }
-    }
-
     public void setFrag(int n) {
         fm = getSupportFragmentManager();
         ft = fm.beginTransaction();
-        changeStatusColor(n);
         switch (n) {
             case 0:
                 ft.replace(R.id.main_frame, cardFragment);
-
                 ft.commit();
                 break;
             case 1:
