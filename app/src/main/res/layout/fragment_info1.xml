@@ -1,5 +1,7 @@
 <?xml version="1.0" encoding="utf-8"?>
-<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+<FrameLayout
+    android:id="@+id/info_framelayout"
+    xmlns:android="http://schemas.android.com/apk/res/android"
     android:layout_width="match_parent"
     android:layout_height="@dimen/frameSize">
 
@@ -45,9 +47,11 @@
         </LinearLayout>
 
         <EditText
+            android:id="@+id/info_childName"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:layout_marginTop="20dp"/>
+            android:layout_marginTop="20dp"
+            android:inputType="text"/>
 
         <LinearLayout
             android:layout_width="match_parent"
@@ -71,6 +75,7 @@
         </LinearLayout>
 
         <EditText
+            android:id="@+id/info_childCode"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:layout_marginTop="20dp"/>

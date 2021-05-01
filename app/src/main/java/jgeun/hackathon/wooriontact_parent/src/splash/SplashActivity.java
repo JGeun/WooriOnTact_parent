@@ -33,7 +33,6 @@ public class SplashActivity extends AppCompatActivity {
             else
                 startActivity(new Intent(getApplicationContext(), ChildSignUpActivity.class));*/
             startActivity(new Intent(getApplicationContext(), SignUpActivity.class));
-
         }
     }
 }

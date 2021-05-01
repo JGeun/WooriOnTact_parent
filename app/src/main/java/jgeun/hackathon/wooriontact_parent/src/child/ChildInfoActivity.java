@@ -3,8 +3,11 @@ package jgeun.hackathon.wooriontact_parent.src.child;
 import androidx.appcompat.app.AppCompatActivity;
 import androidx.viewpager2.widget.ViewPager2;
 
+import android.content.Context;
 import android.content.Intent;
+import android.content.SharedPreferences;
 import android.os.Bundle;
+import android.util.Log;
 import android.view.View;
 import android.widget.LinearLayout;
 
@@ -21,6 +24,8 @@ public class ChildInfoActivity extends AppCompatActivity implements View.OnClick
 
     private LinearLayout registerButton;
 
+    public static SharedPreferences sharedPreferences = null;
+    private SharedPreferences.Editor editor;
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
@@ -28,6 +33,9 @@ public class ChildInfoActivity extends AppCompatActivity implements View.OnClick
 
         registerButton = findViewById(R.id.info_btn_register);
         registerButton.setOnClickListener(this);
+
+        sharedPreferences = this.getSharedPreferences("pay", Context.MODE_PRIVATE);;
+        editor = sharedPreferences.edit();
 
         viewpager = findViewById(R.id.viewpager);
         myAdapter = new InfoAdapter(this, 3);
@@ -45,7 +53,7 @@ public class ChildInfoActivity extends AppCompatActivity implements View.OnClick
                 super.onPageScrolled(position, positionOffset, positionOffsetPixels);
                 if (positionOffsetPixels == 0) {
                     viewpager.setCurrentItem(position);
-                    if (position == 2) {
+                    if(position == 2) {
                         registerButton.setVisibility(View.VISIBLE);
                     } else {
                         registerButton.setVisibility(View.INVISIBLE);

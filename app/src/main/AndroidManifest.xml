@@ -4,26 +4,29 @@
 
     <application
         android:allowBackup="true"
-        android:icon="@mipmap/ic_launcher"
+        android:icon="@mipmap/parent_logo"
         android:label="@string/app_name"
-        android:roundIcon="@mipmap/ic_launcher_round"
+        android:roundIcon="@mipmap/parent_logo"
         android:supportsRtl="true"
         android:theme="@style/Theme.WooriOnTact_Parent">
         <activity android:name=".src.mypage.MyPageActivity">
-
-        </activity>
-        <activity android:name=".src.child.CardSettingActivity" />
-        <activity android:name=".src.child.ChildInfoActivity"
-            android:windowSoftInputMode="adjustPan"/>
-        <activity android:name=".src.child.RegisterChildActivity" />
-        <activity android:name=".src.card.SelectMyCardActivity" />
-        <activity android:name=".src.signup.SignUpActivity" />
-        <activity android:name=".src.splash.SplashActivity">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
 
                 <category android:name="android.intent.category.LAUNCHER" />
             </intent-filter>
+        </activity>
+        <activity android:name=".src.child.CardSettingActivity" />
+        <activity
+            android:name=".src.child.ChildInfoActivity"
+            android:windowSoftInputMode="adjustPan">
+
+        </activity>
+        <activity android:name=".src.child.RegisterChildActivity" />
+        <activity android:name=".src.card.SelectMyCardActivity" />
+        <activity android:name=".src.signup.SignUpActivity" />
+        <activity android:name=".src.splash.SplashActivity">
+
         </activity>
         <activity android:name=".MainActivity" />
     </application>
