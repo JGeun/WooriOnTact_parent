@@ -1,0 +1,28 @@
+package jgeun.hackathon.wooriontact_parent.src.card;
+
+import android.os.Bundle;
+import android.view.LayoutInflater;
+import android.view.View;
+import android.view.ViewGroup;
+
+import androidx.annotation.NonNull;
+import androidx.annotation.Nullable;
+import androidx.fragment.app.Fragment;
+
+import jgeun.hackathon.wooriontact_parent.R;
+
+public class CardFragment extends Fragment {
+
+    private int cardNumber;
+    public CardFragment(int cardNumber){
+        this.cardNumber = cardNumber;
+    }
+
+    @Nullable
+    @Override
+    public View onCreateView(@NonNull LayoutInflater inflater, @Nullable ViewGroup container, @Nullable Bundle savedInstanceState) {
+        View view = inflater.inflate(R.layout.item_card, container, false);
+
+        return view;
+    }
+}
