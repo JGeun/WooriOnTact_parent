@@ -12,6 +12,7 @@ import android.widget.Toast;
 
 import jgeun.hackathon.wooriontact_parent.R;
 import jgeun.hackathon.wooriontact_parent.src.card.SelectMyCardActivity;
+import jgeun.hackathon.wooriontact_parent.src.login.LoginActivity;
 
 public class SignUpActivity extends AppCompatActivity implements View.OnClickListener{
 
@@ -41,7 +42,7 @@ public class SignUpActivity extends AppCompatActivity implements View.OnClickLis
         switch (v.getId()){
             case R.id.signup_btn_connect:
                 if(isValidate()){
-                    startActivity(new Intent(this, SelectMyCardActivity.class));
+                    startActivity(new Intent(this, LoginActivity.class));
                 }else{
                     Toast.makeText(this, "모두 동의해주세요.", Toast.LENGTH_SHORT).show();
                 }

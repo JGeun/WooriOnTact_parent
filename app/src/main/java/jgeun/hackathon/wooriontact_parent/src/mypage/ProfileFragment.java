@@ -48,17 +48,17 @@ public class ProfileFragment extends Fragment {
         });
 
         ArrayList<InfoData> missonList = new ArrayList<>();
-        missonList.add(new InfoData("일주일 동안 100,000원 이하 사용하기", true));
-        missonList.add(new InfoData("일주일 동안 100,000원 이하 사용하기", true));
-        missonList.add(new InfoData("일주일 동안 100,000원 이하 사용하기", false));
-        missonList.add(new InfoData("일주일 동안 100,000원 이하 사용하기", true));
+        missonList.add(new InfoData("일주일마다 15,000원 저축하기", true));
+        missonList.add(new InfoData("게임에 10,000원 이하로 사용하기", true));
+        missonList.add(new InfoData("군것질 30,000원 이하로 사용하기", false));
+        missonList.add(new InfoData("문구점에서 준비물 사오기", true));
 
         RecyclerView missionView=view.findViewById(R.id.home_rv_mission);
         missionView.setLayoutManager(new LinearLayoutManager(view.getContext()));
         missionView.setAdapter(new ProfileAdapter(missonList));
 
         ArrayList<InfoData> creditList = new ArrayList<>();
-        creditList.add(new InfoData("쿠키런 킹덤 /2,000원", false));
+        creditList.add(new InfoData("쿠키런 킹덤 2,000원", false));
         creditList.add(new InfoData("동아문방구 3,000원", false));
         creditList.add(new InfoData("이마트 이수점 9,900원", false));
         creditList.add(new InfoData("네이버페이 6,100원", false));

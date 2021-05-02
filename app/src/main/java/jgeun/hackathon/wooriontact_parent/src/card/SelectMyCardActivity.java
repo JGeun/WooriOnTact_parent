@@ -14,8 +14,11 @@ import android.util.Log;
 import android.view.View;
 import android.widget.LinearLayout;
 
+import java.util.ArrayList;
+
 import jgeun.hackathon.wooriontact_parent.R;
 import jgeun.hackathon.wooriontact_parent.src.card.adapter.CardAdapter;
+import jgeun.hackathon.wooriontact_parent.src.card.models.AccData;
 import jgeun.hackathon.wooriontact_parent.src.card.models.AccountRequest;
 import jgeun.hackathon.wooriontact_parent.src.card.models.AccountResponse;
 import jgeun.hackathon.wooriontact_parent.src.card.models.DataBody;
@@ -74,15 +77,22 @@ public class SelectMyCardActivity extends AppCompatActivity implements View.OnCl
                             return;
                         }else{
                             cardButton.setVisibility(View.GONE);
-
+                            ArrayList<String> accNumList = new ArrayList<>();
+                            ArrayList<String> accCategoryList = new ArrayList<>();
                             ResponseDataBody responseDataBody = response.body().getDataBody();
                             int size = responseDataBody.getBodyCount();
                             for(int i=0; i<size; i++){
-                                if(responseDataBody.getAccList().get(i).getAccCategory().equals("P"))
-                                    accTotalCount+=1;
+                                AccData accData = responseDataBody.getAccList().get(i);
+                                if(accData.getAccCategory().equals("P")) {
+                                    accTotalCount += 1;
+                                    accNumList.add(accData.getAccNumber());
+                                    accCategoryList.add(accData.getAccName());
+                                }
+
                             }
+
                             viewpager = findViewById(R.id.select_viewpager);
-                            cardAdapter = new CardAdapter((FragmentActivity) activity, accTotalCount);
+                            cardAdapter = new CardAdapter((FragmentActivity) activity, accTotalCount, accNumList, accCategoryList);
                             viewpager.setAdapter(cardAdapter);
                             mIndicator = findViewById(R.id.select_indicator);
                             mIndicator.setViewPager(viewpager);
