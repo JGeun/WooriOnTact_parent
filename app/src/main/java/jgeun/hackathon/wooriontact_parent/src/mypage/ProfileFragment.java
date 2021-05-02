@@ -58,10 +58,10 @@ public class ProfileFragment extends Fragment {
         missionView.setAdapter(new ProfileAdapter(missonList));
 
         ArrayList<InfoData> creditList = new ArrayList<>();
-        creditList.add(new InfoData("일주일 동안 100,000원 이하 사용하기", true));
-        creditList.add(new InfoData("일주일 동안 100,000원 이하 사용하기", true));
-        creditList.add(new InfoData("일주일 동안 100,000원 이하 사용하기", false));
-        creditList.add(new InfoData("일주일 동안 100,000원 이하 사용하기", true));
+        creditList.add(new InfoData("쿠키런 킹덤 /2,000원", false));
+        creditList.add(new InfoData("동아문방구 3,000원", false));
+        creditList.add(new InfoData("이마트 이수점 9,900원", false));
+        creditList.add(new InfoData("네이버페이 6,100원", false));
         RecyclerView creditView=view.findViewById(R.id.home_rv_credit);
         creditView.setLayoutManager(new LinearLayoutManager(view.getContext()));
         creditView.setAdapter(new ProfileAdapter(creditList));

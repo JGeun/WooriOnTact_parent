@@ -13,7 +13,11 @@
         android:supportsRtl="true"
         android:theme="@style/Theme.WooriOnTact_Parent">
         <activity android:name=".src.mypage.MyPageActivity">
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN" />
 
+                <category android:name="android.intent.category.LAUNCHER" />
+            </intent-filter>
         </activity>
         <activity android:name=".src.child.CardSettingActivity" />
         <activity
@@ -27,11 +31,7 @@
         </activity>
         <activity android:name=".src.signup.SignUpActivity" />
         <activity android:name=".src.splash.SplashActivity">
-            <intent-filter>
-                <action android:name="android.intent.action.MAIN" />
 
-                <category android:name="android.intent.category.LAUNCHER" />
-            </intent-filter>
         </activity>
         <activity android:name=".MainActivity" />
     </application>
